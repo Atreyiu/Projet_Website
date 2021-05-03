@@ -6,4 +6,4 @@ def home(request):
 
 
 def blog(request):
-    return render(request, 'Pages/blog.html')
+    return render(request, 'blog/portfolio.html')

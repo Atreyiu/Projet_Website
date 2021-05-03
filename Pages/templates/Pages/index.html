@@ -68,7 +68,7 @@
       <nav id="navbar" class="navbar">
         <ul>
               <li><a class="nav-link scrollto active" href="/">Accueil</a></li>
-          <li><a class="nav-link scrollto" href="#about">A propos</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'about' %}">A propos</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto" href="{% url 'portfolio' %}">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="#">Team</a></li>
@@ -140,7 +140,7 @@
               </p>
               <p>Le lien ci dessous vous dirigera vers les étapes à suivre.</p>
               <div class="text-center text-lg-start">
-                <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                <a href="{% url 'about' %}" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
                   <span>Tout de suite !</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
@@ -1197,8 +1197,6 @@
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
-
-
 
   </footer><!-- End Footer -->
 

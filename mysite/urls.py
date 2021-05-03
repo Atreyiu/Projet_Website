@@ -23,7 +23,8 @@ urlpatterns = [
     path('portfolio/', include('portfolio.urls')),
     path('admin/', admin.site.urls),
     path('polls/', include('polls.urls')),
-    # root to pages_index
-
+    path('about/', include('about.urls')),
+    path('contact/', include('contact.urls')),
 
 ]
+

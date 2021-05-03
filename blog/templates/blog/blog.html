@@ -51,7 +51,7 @@
       <nav id="navbar" class="navbar">
         <ul>
            <li><a class="nav-link scrollto active" href="/">Accueil</a></li>
-          <li><a class="nav-link scrollto" href="#about">A propos</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'about' %}">A propos</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto" href="{% url 'portfolio' %}">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="#">Team</a></li>
@@ -73,8 +73,8 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-           <li><a class="getstarted scrollto" href="#about">Lectures aléatoires</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'contact' %}">Contact</a></li>
+           <li><a class="getstarted scrollto" href="/">Lectures aléatoires</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -89,7 +89,7 @@
       <div class="container">
 
         <ol>
-          <li><a href="/">Homepage</a></li>
+          <li><a href="/">Accueil</a></li>
           <li>Blog</li>
         </ol>
         <h2>Blog</h2>
@@ -129,7 +129,7 @@
                   Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
                 </p>
                 <div class="read-more">
-                  <a href="blog-single.html">Read More</a>
+                  <a href="{% url 'blog_detail' %}">Read More</a>
                 </div>
               </div>
 

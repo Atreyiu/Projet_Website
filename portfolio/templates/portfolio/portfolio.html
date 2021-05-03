@@ -50,11 +50,11 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto " href="/">Accueil</a></li>
-          <li><a class="nav-link scrollto" href="#about">A Propos</a></li>
+           <li><a class="nav-link scrollto active" href="/">Accueil</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'about' %}">A propos</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto" href="{% url 'portfolio' %}">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#">Team</a></li>
           <li><a href="{% url 'blog' %}">Blog</a></li>
           <li class="dropdown"><a href="#"><span>Paramètres</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -73,8 +73,8 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="#about">Lectures aléatoires</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'contact' %}">Contact</a></li>
+           <li><a class="getstarted scrollto" href="/">Lectures aléatoires</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -89,84 +89,151 @@
       <div class="container">
 
         <ol>
-          <li><a href="index.html">Home</a></li>
-          <li>Portfolio Details</li>
+          <li><a href="/">Accueil</a></li>
+          <li>Portfolio</li>
         </ol>
-        <h2>Portfolio Details</h2>
+        <h2>Portfolio</h2>
 
       </div>
     </section><!-- End Breadcrumbs -->
 
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
+    <!-- ======= Blog Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
 
-        <div class="row gy-4">
+        <div class="row">
 
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper-container">
-              <div class="swiper-wrapper align-items-center">
+          <div class="col-lg-8 entries">
 
-                <div class="swiper-slide">
-                  <img src="{% static 'assets/img/portfolio/portfolio-1.jpg' %}" alt="">
-                </div>
+            <article class="entry">
 
-                <div class="swiper-slide">
-                  <img src="{% static 'assets/img/portfolio/portfolio-2.jpg' %}" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="{% static 'assets/img/portfolio/portfolio-3.jpg' %}" alt="">
-                </div>
-
+              <div class="entry-img">
+                <img src="{% static 'assets/img/blog/blog-1.jpg' %}" alt="" class="img-fluid">
               </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
+
+              <h2 class="entry-title">
+                <a href="blog-single.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+                <p>
+                  Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta.
+                  Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
+                </p>
+                <div class="read-more">
+                  <a href="{% url 'blog_detail' %}">Read More</a>
+                </div>
+              </div>
+
+            </article><!-- End blog entry -->
+
+            <article class="entry">
+
+              <div class="entry-img">
+                <img src="{% static 'assets/img/blog/blog-2.jpg' %}" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+                <a href="blog-single.html">Nisi magni odit consequatur autem nulla dolorem</a>
+              </h2>
+
+              <div class="entry-meta">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">John Doe</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
+                </ul>
+              </div>
+
+              <div class="entry-content">
+                <p>
+                  Incidunt voluptate sit temporibus aperiam. Quia vitae aut sint ullam quis illum voluptatum et. Quo libero rerum voluptatem pariatur nam.
+                  Ad impedit qui officiis est in non aliquid veniam laborum. Id ipsum qui aut. Sit aliquam et quia molestias laboriosam. Tempora nam odit omnis eum corrupti qui aliquid excepturi molestiae. Facilis et sint quos sed voluptas. Maxime sed tempore enim omnis non alias odio quos distinctio.
+                </p>
+                <div class="read-more">
+                  <a href="blog-single.html">Read More</a>
+                </div>
+              </div>
+
+            </article><!-- End blog entry -->
+
+
+
+
+
+          </div><!-- End blog entries list -->
 
           <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
-              </ul>
-            </div>
-            <div class="portfolio-description">
-              <h2>This is an example of portfolio detail</h2>
-              <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-              </p>
-            </div>
-          </div>
+
+            <div class="sidebar">
+
+              <h3 class="sidebar-title">Categories</h3>
+              <div class="sidebar-item categories">
+                <ul>
+                  <li><a href="#">Michel Jonathan <span>(0)</span></a></li>
+                  <li><a href="#">Nicolas Mansani <span>(0)</span></a></li>
+                  <li><a href="#">Julien Mansani <span>(0)</span></a></li>
+                  <li><a href="#">Denis Biscevic <span>(0)</span></a></li>
+
+                </ul>
+              </div><!-- End sidebar categories-->
+
+              <h3 class="sidebar-title">Auteurs</h3>
+              <div class="sidebar-item recent-posts">
+                <div class="post-item clearfix">
+                  <img src="{% static 'assets/img/blog/blog-recent-1.jpg' %}" alt="">
+                  <h4><a href="blog-single.html">Nihil blanditiis at in nihil autem</a></h4>
+                  <time datetime="2020-01-01">Jan 1, 2020</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="{% static 'assets/img/blog/blog-recent-2.jpg' %}" alt="">
+                  <h4><a href="blog-single.html">Quidem autem et impedit</a></h4>
+                  <time datetime="2020-01-01">Jan 1, 2020</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="{% static 'assets/img/blog/blog-recent-3.jpg' %}" alt="">
+                  <h4><a href="blog-single.html">Id quia et et ut maxime similique occaecati ut</a></h4>
+                  <time datetime="2020-01-01">Jan 1, 2020</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="{% static 'assets/img/blog/blog-recent-4.jpg' %}" alt="">
+                  <h4><a href="blog-single.html">Laborum corporis quo dara net para</a></h4>
+                  <time datetime="2020-01-01">Jan 1, 2020</time>
+                </div>
+
+                <div class="post-item clearfix">
+                  <img src="{% static 'assets/img/blog/blog-recent-5.jpg' %}" alt="">
+                  <h4><a href="blog-single.html">Et dolores corrupti quae illo quod dolor</a></h4>
+                  <time datetime="2020-01-01">Jan 1, 2020</time>
+                </div>
+
+              </div><!-- End sidebar recent posts-->
+
+
+            </div><!-- End sidebar -->
+
+          </div><!-- End blog sidebar -->
 
         </div>
 
       </div>
-    </section><!-- End Portfolio Details Section -->
+    </section><!-- End Blog Section -->
 
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
-
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-12 text-center">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-          </div>
-          <div class="col-lg-6">
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <div class="footer-top">
       <div class="container">
