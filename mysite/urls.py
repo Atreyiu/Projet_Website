@@ -18,10 +18,12 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    #path('articles/', include('articles.urls')),
-    #path('portfolio/', include('portfolio.urls')),
-    #path('polls/', include('polls.urls')),
+    path('', include('Pages.urls')),
+    path('blog/', include('blog.urls')),
+    path('portfolio/', include('portfolio.urls')),
     path('admin/', admin.site.urls),
-    # root
-    path('', include('polls.urls')),
+    path('polls/', include('polls.urls')),
+    # root to pages_index
+
+
 ]
