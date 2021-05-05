@@ -91,9 +91,9 @@
         <ol>
           <li><a href="/">Accueil</a></li>
           <li><a href="{% url 'blog:blog_index' %}">Blog</a></li>
-          <li>Blog Single</li>
+          <li>{{ post.post_title }}</li>
         </ol>
-        <h2>Blog Single</h2>
+        <h2>{{ post.post_title }}</h2>
 
       </div>
     </section><!-- End Breadcrumbs -->
@@ -113,7 +113,7 @@
               </div>
 
               <h2 class="entry-title">
-                <a href="blog-single.html">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+                <a href="blog-single.html">{{ post.post_title }}</a>
               </h2>
 
               <div class="entry-meta">
