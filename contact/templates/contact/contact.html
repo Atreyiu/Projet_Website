@@ -52,7 +52,7 @@
         <ul>
           <li><a class="nav-link scrollto " href="/">Accueil</a></li>
           <li><a class="nav-link scrollto" href="{% url 'about' %}">A propos</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'services' %}">Services</a></li>
           <li><a class="nav-link scrollto" href="{% url 'portfolio:portfolio_index' %}">Portfolio</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a href="{% url 'blog:blog_index' %}">Blog</a></li>
@@ -97,13 +97,95 @@
       </div>
     </section><!-- End Breadcrumbs -->
 
-    <section class="inner-page">
-      <div class="container">
-        <p>
-          Example inner page template
-        </p>
+   <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Nous contacter ?</h2>
+          <p>Rien de plus simple !</p>
+        </header>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+
+            <div class="row gy-4">
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-geo-alt"></i>
+                  <h3>Adresse</h3>
+                  <p>Dans l'éventualité d'un contact par voix classiques.</p>
+                  <p>Signalez cette demande par mail en signalant les raisons.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-telephone"></i>
+                  <h3>Teléphonne</h3>
+                  <p>Si vous souhaitez me contacter par telephonne, SMS ou What's APP</p>
+                  <p>Signalez cette demande par mail en signalant les raisons.</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-envelope"></i>
+                  <h3>Par mail</h3>
+                  <p>atreyiuuu@gmail.com</p>
+                  <p>jonathanremymichel@laposte.net</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box">
+                  <i class="bi bi-clock"></i>
+                  <h3>Heures d'ouvertures</h3>
+                  <p>Du lundi au vendredi<br>9:00 - 18:00</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" class="php-email-form">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Votre nom" required>
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Votre mail" required>
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Objet" required>
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Envoyer votre message</button>
+                </div>
+
+              </div>
+            </form>
+
+          </div>
+
+        </div>
+
       </div>
-    </section>
+
+    </section><!-- End Contact Section -->
+
 
   </main><!-- End #main -->
 
