@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'services.apps.ServicesConfig',
     'contact.apps.ContactConfig',
     'about.apps.AboutConfig',
     'blog.apps.BlogConfig',
@@ -82,7 +83,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'portfolio_blog',
+        'NAME': 'siteweb',
     }
 }
 
